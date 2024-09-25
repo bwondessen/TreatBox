@@ -7,16 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		69420D2E2CA4C7920093E49B /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69420D2D2CA4C7920093E49B /* Meal.swift */; };
 		69EB9E3C2CA3864500F70C47 /* TreatBoxApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EB9E3B2CA3864500F70C47 /* TreatBoxApp.swift */; };
-		69EB9E3E2CA3864500F70C47 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EB9E3D2CA3864500F70C47 /* ContentView.swift */; };
+		69EB9E3E2CA3864500F70C47 /* MealsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EB9E3D2CA3864500F70C47 /* MealsView.swift */; };
 		69EB9E402CA3864600F70C47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69EB9E3F2CA3864600F70C47 /* Assets.xcassets */; };
 		69EB9E442CA3864600F70C47 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69EB9E432CA3864600F70C47 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		69420D2D2CA4C7920093E49B /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
 		69EB9E382CA3864500F70C47 /* TreatBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TreatBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69EB9E3B2CA3864500F70C47 /* TreatBoxApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreatBoxApp.swift; sourceTree = "<group>"; };
-		69EB9E3D2CA3864500F70C47 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		69EB9E3D2CA3864500F70C47 /* MealsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsView.swift; sourceTree = "<group>"; };
 		69EB9E3F2CA3864600F70C47 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		69EB9E412CA3864600F70C47 /* TreatBox.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TreatBox.entitlements; sourceTree = "<group>"; };
 		69EB9E432CA3864600F70C47 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -33,6 +35,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		69420D2A2CA4C6C50093E49B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				69420D2D2CA4C7920093E49B /* Meal.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		69420D2B2CA4C6CB0093E49B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				69EB9E3D2CA3864500F70C47 /* MealsView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		69420D2C2CA4C6CF0093E49B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		69EB9E2F2CA3864500F70C47 = {
 			isa = PBXGroup;
 			children = (
@@ -53,7 +78,9 @@
 			isa = PBXGroup;
 			children = (
 				69EB9E3B2CA3864500F70C47 /* TreatBoxApp.swift */,
-				69EB9E3D2CA3864500F70C47 /* ContentView.swift */,
+				69420D2A2CA4C6C50093E49B /* Model */,
+				69420D2C2CA4C6CF0093E49B /* ViewModel */,
+				69420D2B2CA4C6CB0093E49B /* View */,
 				69EB9E3F2CA3864600F70C47 /* Assets.xcassets */,
 				69EB9E412CA3864600F70C47 /* TreatBox.entitlements */,
 				69EB9E422CA3864600F70C47 /* Preview Content */,
@@ -139,7 +166,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				69EB9E3E2CA3864500F70C47 /* ContentView.swift in Sources */,
+				69EB9E3E2CA3864500F70C47 /* MealsView.swift in Sources */,
+				69420D2E2CA4C7920093E49B /* Meal.swift in Sources */,
 				69EB9E3C2CA3864500F70C47 /* TreatBoxApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -290,7 +318,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.brukewondessen.TreatBox;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -326,7 +355,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.brukewondessen.TreatBox;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
