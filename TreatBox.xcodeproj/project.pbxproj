@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		69420D2E2CA4C7920093E49B /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69420D2D2CA4C7920093E49B /* Meal.swift */; };
+		69420D322CA4CC890093E49B /* MealViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69420D312CA4CC890093E49B /* MealViewModel.swift */; };
 		69EB9E3C2CA3864500F70C47 /* TreatBoxApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EB9E3B2CA3864500F70C47 /* TreatBoxApp.swift */; };
 		69EB9E3E2CA3864500F70C47 /* MealsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EB9E3D2CA3864500F70C47 /* MealsView.swift */; };
 		69EB9E402CA3864600F70C47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69EB9E3F2CA3864600F70C47 /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 
 /* Begin PBXFileReference section */
 		69420D2D2CA4C7920093E49B /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
+		69420D312CA4CC890093E49B /* MealViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealViewModel.swift; sourceTree = "<group>"; };
 		69EB9E382CA3864500F70C47 /* TreatBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TreatBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69EB9E3B2CA3864500F70C47 /* TreatBoxApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreatBoxApp.swift; sourceTree = "<group>"; };
 		69EB9E3D2CA3864500F70C47 /* MealsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsView.swift; sourceTree = "<group>"; };
@@ -54,6 +56,7 @@
 		69420D2C2CA4C6CF0093E49B /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				69420D312CA4CC890093E49B /* MealViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -167,6 +170,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				69EB9E3E2CA3864500F70C47 /* MealsView.swift in Sources */,
+				69420D322CA4CC890093E49B /* MealViewModel.swift in Sources */,
 				69420D2E2CA4C7920093E49B /* Meal.swift in Sources */,
 				69EB9E3C2CA3864500F70C47 /* TreatBoxApp.swift in Sources */,
 			);
