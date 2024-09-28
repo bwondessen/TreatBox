@@ -20,7 +20,6 @@ Features and technologies:
 * YouTube Link
 
 ## Demo
-![treatBoxGif](https://github.com/user-attachments/assets/66018b53-8364-4f21-883f-8d307a4e5f08)
-
+<img src="https://github.com/user-attachments/assets/66018b53-8364-4f21-883f-8d307a4e5f08" alt="your_alternative_text" width="your_width" height="your_height" loop=infinite>
 
 
