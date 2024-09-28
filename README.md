@@ -15,6 +15,7 @@ Features and technologies:
 * Image caching
 * Unit/UI testing (XCTest)
 * API calls
+* Thread safety
 * MVVM architecture
 * Search
 * YouTube Link
