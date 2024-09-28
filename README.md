@@ -1,6 +1,6 @@
 # TreatBox - Fetch iOS Coding Challenge
 
-## A native iOS app written in SwiftUI that uses TheMealDB's api (https://themealdb.com/api.php) to fetch and display desserts and its details!
+## A native iOS app written in SwiftUI that uses TheMealDB's API (https://themealdb.com/api.php) to fetch and display desserts and its details!
 
 When a user selects a dessert, they are taken to a detail view that includes:
 
