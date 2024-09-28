@@ -7,8 +7,6 @@
 
 import Foundation
 
-// MARK: - Meal Model
-
 struct Meals: Codable {
     let meals: [Meal]
 }

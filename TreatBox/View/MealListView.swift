@@ -8,11 +8,24 @@
 import SwiftUI
 
 struct MealListView: View {
+    @Binding var path: [String]
+    let meal: Meal
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Button {
+                path = [meal.idMeal]
+            } label: {
+                VStack {
+                    MealRowView(mealID: meal.strMealThumb, mealName: meal.strMeal)
+                }
+            }
+            .foregroundStyle(.primary)
+            .listRowSeparator(.hidden)
+        }
     }
 }
 
-#Preview {
-    MealListView()
-}
+//#Preview {
+//    MealListView()
+//}

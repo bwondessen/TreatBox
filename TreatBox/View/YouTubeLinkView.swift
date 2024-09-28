@@ -8,11 +8,27 @@
 import SwiftUI
 
 struct YouTubeLinkView: View {
+    let meal: MealDetailViewModel
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Link(destination: URL(string: meal.meal?.strYoutube ?? "")!) {
+            HStack {
+                Image(systemName: "play.rectangle.fill")
+                    .foregroundStyle(.red)
+                    .font(.title3)
+                Text("YouTube")
+                    .font(.headline)
+                    .foregroundStyle(.black)
+            }
+            .padding()
+            .background(.white)
+            .clipShape(.rect(cornerRadius: 15))
+            .shadow(color: .red, radius: 2.5)
+        }
+        .padding(.top)
     }
 }
 
-#Preview {
-    YouTubeLinkView()
-}
+//#Preview {
+//    YouTubeLinkView(meal: MealDetailViewModel())
+//}

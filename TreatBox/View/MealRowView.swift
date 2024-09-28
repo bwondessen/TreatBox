@@ -8,11 +8,25 @@
 import SwiftUI
 
 struct MealRowView: View {
+    let mealID: String
+    let mealName: String
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Section {
+            HStack {
+                MealImageView(url: mealID, key: mealID)
+                    .frame(height: 80)
+                    .clipShape(.rect(cornerRadius: 10))
+                
+                Text(mealName)
+                
+                Spacer()
+            }
+        }
     }
 }
 
+
 #Preview {
-    MealRowView()
+    MealRowView(mealID: "https://www.themealdb.com//images//media//meals//swttys1511385853.jpg", mealName: "New York Cheesecake")
 }

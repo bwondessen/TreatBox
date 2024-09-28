@@ -12,25 +12,24 @@ struct MealImageView: View {
     
     @State var isLoading: Bool = true
     
-    init(url: String) {
-        _loaderViewModel = StateObject(wrappedValue: ImageLoadingViewModel(url: url))
+    init(url: String, key: String) {
+        _loaderViewModel = StateObject(wrappedValue: ImageLoadingViewModel(url: url, key: key))
     }
     
     var body: some View {
         ZStack {
+            // Show image if not loading
             if loaderViewModel.isLoading {
                 ProgressView()
             } else  if let image = loaderViewModel.image {
                 Image(uiImage: image)
                     .resizable()
                     .scaledToFit()
-                    .frame(height: 80)
-                    .clipShape(.rect(cornerRadius: 10))
             }
         }
     }
 }
 
 #Preview {
-    DownloadingImageView(url: "https://www.themealdb.com//images//media//meals//swttys1511385853.jpg")
- }
+    MealImageView(url: "https://www.themealdb.com//images//media//meals//swttys1511385853.jpg", key: "1")
+}
