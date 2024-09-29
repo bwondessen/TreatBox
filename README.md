@@ -2,7 +2,7 @@
 
 ## A native iOS app written in SwiftUI that uses TheMealDB's API (https://themealdb.com/api.php) to fetch and display desserts and its details!
 
-When a user selects a dessert, they are taken to a detail view that includes:
+This app displays a list of desserts and when a user selects a dessert, they are taken to a detail view that includes:
 
 * Meal name
 * Instructions
@@ -13,7 +13,7 @@ Features and technologies:
 * Swift Concurrency (async/await)
 * Combine
 * Image caching
-* Unit/UI testing (XCTest)
+* Unit testing
 * API calls
 * Thread safety
 * MVVM architecture
