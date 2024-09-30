@@ -33,7 +33,7 @@ struct MealDetailView: View {
                         InstructionsView(mealDetailViewModel: mealDetailViewModel)
                         
                         // YouTube link
-                        YouTubeLinkView(meal: mealDetailViewModel)
+                        YouTubeLinkView(mealDetailViewModel: mealDetailViewModel)
                     }
                     .padding()
                     .padding(.bottom)

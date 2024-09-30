@@ -7,11 +7,11 @@
 
 import Foundation
 
-struct MealDetails: Decodable {
+struct MealDetails: Codable {
     let meals: [MealDetail]
 }
 
-struct MealDetail: Codable {
+struct MealDetail: Codable, Hashable {
     let idMeal: String
     let strMeal: String
     let strDrinkAlternate: String?
@@ -63,9 +63,10 @@ struct MealDetail: Codable {
     let strMeasure20: String?
     let strSource: String?
     let strImageSource: String?
-    let strCreativeCommonsConfirmed: String?
+    let strCreativeCommonsConfirmed: String? 
     let dateModified: String?
     
+    // For previews
     static let mealDetailPreview: MealDetail = MealDetail(idMeal: "52858", strMeal: "New York Cheesecake", strDrinkAlternate: "", strCategory: "American", strArea: "", strInstructions: "", strMealThumb: "", strTags: "", strYoutube: "", strIngredient1: "eggs", strIngredient2: "flour", strIngredient3: "sugar", strIngredient4: "brown sugar", strIngredient5: "cream", strIngredient6: "cream cheese", strIngredient7: "butter", strIngredient8: "vanilla", strIngredient9: "graham cracker", strIngredient10: "", strIngredient11: "", strIngredient12: "", strIngredient13: "", strIngredient14: "", strIngredient15: "", strIngredient16: "", strIngredient17: "", strIngredient18: "", strIngredient19: "", strIngredient20: "", strMeasure1: "10", strMeasure2: "1", strMeasure3: "2", strMeasure4: "5", strMeasure5: "18", strMeasure6: "3", strMeasure7: "", strMeasure8: "", strMeasure9: "", strMeasure10: "", strMeasure11: "", strMeasure12: "", strMeasure13: "", strMeasure14: "", strMeasure15: "", strMeasure16: "", strMeasure17: "", strMeasure18: "", strMeasure19: "", strMeasure20: "", strSource: "", strImageSource: "", strCreativeCommonsConfirmed: "", dateModified: "")
     
     // Get and format ingredients

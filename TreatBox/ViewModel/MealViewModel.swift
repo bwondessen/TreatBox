@@ -41,14 +41,4 @@ class MealViewModel: ObservableObject {
             throw NetworkingError.invalidData
         }
     }
-    
-    // Validate data
-    private func handleOutput(output: URLSession.DataTaskPublisher.Output) throws -> Data {
-        // Validate HTTP URL response status code
-        guard let response = output.response as? HTTPURLResponse, response.statusCode >= 200 && response.statusCode <= 300 else {
-            throw NetworkingError.invalidResponse
-        }
-        
-        return output.data
-    }
 }

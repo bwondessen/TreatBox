@@ -40,32 +40,5 @@ class MealDetailViewModel: ObservableObject {
         } catch {
             throw NetworkingError.invalidData
         }
-        
-        //        URLSession.shared.dataTaskPublisher(for: url)
-        //            .subscribe(on: DispatchQueue.global(qos: .background)) // Download on background thread
-        //            .receive(on: DispatchQueue.main) // Receive on main thread
-        //            .tryMap(handleOutput)
-        //            .decode(type: MealDetails.self, decoder: JSONDecoder()) // Decode data from URL
-        //            .sink { completion in
-        //                switch completion {
-        //                case .finished:
-        //                    break
-        //                case .failure(let error):
-        //                    print("Error downloading data: \(error.localizedDescription)")
-        //                }
-        //            } receiveValue: { [weak self] data in
-        //                self?.meal = data.meals.first
-        //            }
-        //            .store(in: &cancellables)
-    }
-    
-    // Validate data
-    private func handleOutput(output: URLSession.DataTaskPublisher.Output) throws -> Data {
-        // Validate HTTP URL response  code
-        guard let response = output.response as? HTTPURLResponse, response.statusCode >= 200 && response.statusCode <= 300 else {
-            throw NetworkingError.invalidResponse
-        }
-        
-        return output.data
     }
 }

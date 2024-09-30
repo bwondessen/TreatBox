@@ -8,11 +8,12 @@
 import SwiftUI
 
 struct MealsView: View {
+    static let tab: String = "MealsView"
+    
     @StateObject var mealViewModel: MealViewModel = MealViewModel()
     
     @State private var errorMessage: String = "Data failed to fetch..."
     @State private var path: [String] = [String]() // Navigation path
-    
     @State private var searchText: String = ""
     
     var body: some View {
@@ -20,6 +21,7 @@ struct MealsView: View {
             // List of meals
             List(searchResults) { meal in
                 MealListView(path: $path, meal: meal)
+                
             }
             .navigationTitle("TreatBox")
             .scrollContentBackground(.hidden)

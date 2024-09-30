@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct TreatBoxApp: App {
+struct TreatBoxApp: App {    
     var body: some Scene {
         WindowGroup {
             MealsView()
