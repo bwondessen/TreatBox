@@ -9,6 +9,7 @@ import SwiftUI
 
 struct MealListView: View {
     @Binding var path: [String]
+    
     let meal: Meal
     
     var body: some View {

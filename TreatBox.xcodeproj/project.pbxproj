@@ -23,6 +23,9 @@
 		69A0EA9D2CA5D8F700BBE410 /* MealDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A0EA9C2CA5D8F700BBE410 /* MealDetailViewModel.swift */; };
 		69A0EA9F2CA5D96000BBE410 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A0EA9E2CA5D96000BBE410 /* Errors.swift */; };
 		69A0EAA12CA617C000BBE410 /* MealDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A0EAA02CA617C000BBE410 /* MealDetailView.swift */; };
+		69E3B6DF2CAB675F0029678E /* BookmarkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E3B6DE2CAB675F0029678E /* BookmarkView.swift */; };
+		69E3B6E72CAB73A30029678E /* TreatBox.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 69E3B6E52CAB73A30029678E /* TreatBox.xcdatamodeld */; };
+		69E3B6E92CAB74040029678E /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E3B6E82CAB74040029678E /* DataController.swift */; };
 		69EB9E3C2CA3864500F70C47 /* TreatBoxApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EB9E3B2CA3864500F70C47 /* TreatBoxApp.swift */; };
 		69EB9E3E2CA3864500F70C47 /* MealsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EB9E3D2CA3864500F70C47 /* MealsView.swift */; };
 		69EB9E402CA3864600F70C47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69EB9E3F2CA3864600F70C47 /* Assets.xcassets */; };
@@ -46,6 +49,9 @@
 		69A0EA9C2CA5D8F700BBE410 /* MealDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailViewModel.swift; sourceTree = "<group>"; };
 		69A0EA9E2CA5D96000BBE410 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		69A0EAA02CA617C000BBE410 /* MealDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailView.swift; sourceTree = "<group>"; };
+		69E3B6DE2CAB675F0029678E /* BookmarkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkView.swift; sourceTree = "<group>"; };
+		69E3B6E62CAB73A30029678E /* TreatBox.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TreatBox.xcdatamodel; sourceTree = "<group>"; };
+		69E3B6E82CAB74040029678E /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		69EB9E382CA3864500F70C47 /* TreatBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TreatBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69EB9E3B2CA3864500F70C47 /* TreatBoxApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreatBoxApp.swift; sourceTree = "<group>"; };
 		69EB9E3D2CA3864500F70C47 /* MealsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsView.swift; sourceTree = "<group>"; };
@@ -79,6 +85,7 @@
 			children = (
 				69EB9E3D2CA3864500F70C47 /* MealsView.swift */,
 				69A0EAA02CA617C000BBE410 /* MealDetailView.swift */,
+				69E3B6DE2CAB675F0029678E /* BookmarkView.swift */,
 				69420D3F2CA52E310093E49B /* MealRowView.swift */,
 				69930C562CA7A01500D33887 /* MealListView.swift */,
 				69420D3B2CA5221A0093E49B /* MealImageView.swift */,
@@ -110,6 +117,15 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
+		69E3B6E42CAB73730029678E /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				69E3B6E52CAB73A30029678E /* TreatBox.xcdatamodeld */,
+				69E3B6E82CAB74040029678E /* DataController.swift */,
+			);
+			path = DataModel;
+			sourceTree = "<group>";
+		};
 		69EB9E2F2CA3864500F70C47 = {
 			isa = PBXGroup;
 			children = (
@@ -131,6 +147,7 @@
 			children = (
 				69EB9E3B2CA3864500F70C47 /* TreatBoxApp.swift */,
 				69420D362CA519C10093E49B /* Utilities */,
+				69E3B6E42CAB73730029678E /* DataModel */,
 				69420D2A2CA4C6C50093E49B /* Model */,
 				69420D2C2CA4C6CF0093E49B /* ViewModel */,
 				69420D2B2CA4C6CB0093E49B /* View */,
@@ -224,6 +241,7 @@
 				69930C532CA79F4900D33887 /* InstructionsView.swift in Sources */,
 				69A0EA9D2CA5D8F700BBE410 /* MealDetailViewModel.swift in Sources */,
 				69420D422CA531FA0093E49B /* ImageCacheManager.swift in Sources */,
+				69E3B6E92CAB74040029678E /* DataController.swift in Sources */,
 				69420D322CA4CC890093E49B /* MealViewModel.swift in Sources */,
 				69930C4F2CA79E2800D33887 /* MealNameOverlay.swift in Sources */,
 				69A0EAA12CA617C000BBE410 /* MealDetailView.swift in Sources */,
@@ -235,8 +253,10 @@
 				69930C512CA79EF300D33887 /* IngredientsAndMeasurementsView.swift in Sources */,
 				69420D402CA52E310093E49B /* MealRowView.swift in Sources */,
 				69A0EA9B2CA5D8D800BBE410 /* MealDetail.swift in Sources */,
+				69E3B6DF2CAB675F0029678E /* BookmarkView.swift in Sources */,
 				69EB9E3C2CA3864500F70C47 /* TreatBoxApp.swift in Sources */,
 				69930C572CA7A01500D33887 /* MealListView.swift in Sources */,
+				69E3B6E72CAB73A30029678E /* TreatBox.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -453,6 +473,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		69E3B6E52CAB73A30029678E /* TreatBox.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				69E3B6E62CAB73A30029678E /* TreatBox.xcdatamodel */,
+			);
+			currentVersion = 69E3B6E62CAB73A30029678E /* TreatBox.xcdatamodel */;
+			path = TreatBox.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 69EB9E302CA3864500F70C47 /* Project object */;
 }

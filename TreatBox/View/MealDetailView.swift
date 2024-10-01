@@ -13,7 +13,7 @@ struct MealDetailView: View {
     @State private var errorMessage: String = "Data failed to fetch..."
     
     var mealID: String
-    
+        
     var body: some View {
         ScrollView {
             if let meal = mealDetailViewModel.meal {
@@ -34,6 +34,7 @@ struct MealDetailView: View {
                         
                         // YouTube link
                         YouTubeLinkView(mealDetailViewModel: mealDetailViewModel)
+                            .padding(.bottom, 80)
                     }
                     .padding()
                     .padding(.bottom)
@@ -52,6 +53,7 @@ struct MealDetailView: View {
     }
 }
 
-#Preview {
-    MealDetailView(mealDetailViewModel: MealDetailViewModel(), mealID: "53049")
-}
+//#Preview {
+//    MealDetailView(mealDetailViewModel: MealDetailViewModel(), mealID: "53049")
+//        .environmentObject(BookmarkViewModel())
+//}
