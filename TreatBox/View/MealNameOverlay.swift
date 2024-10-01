@@ -11,6 +11,7 @@ struct MealNameOverlay: View {
     @FetchRequest(sortDescriptors: []) var bookmarks: FetchedResults<MealDetailEntity>
     
     @Environment(\.managedObjectContext) var moc
+    @Environment(\.colorScheme) var colorScheme
     
     @State var mealDetailEntities: Array<MealDetailEntity> = []
     
@@ -19,10 +20,11 @@ struct MealNameOverlay: View {
     var body: some View {
         ZStack {
             Rectangle()
-                .fill(.white)
+                .fill(colorScheme == .light ? .white : .black)
                 .frame(width: UIScreen.main.bounds.width * 0.90, height: UIScreen.main.bounds.height * 0.12)
                 .clipShape(.rect(cornerRadius: 15))
-                .shadow(radius: 3.5)
+                .shadow(color: colorScheme == .dark ? .white : .white.opacity(0), radius: colorScheme == .dark ? 3.5 : 0)
+                .shadow(radius: colorScheme == .light ? 3.5 : 0)
                 .overlay (
                     Button {
                         withAnimation(.default) {
@@ -41,6 +43,7 @@ struct MealNameOverlay: View {
                         .background(.black)
                         .clipShape(Circle())
                         .offset(x: 8, y: 8)
+                        .shadow(color: colorScheme == .dark ? .white : .white.opacity(0), radius: colorScheme == .dark ? 3.5 : 0)
                     , alignment: .bottomTrailing
                 )
             

@@ -9,6 +9,7 @@ import SwiftUI
 
 struct BookmarkView: View {
     @Environment(\.managedObjectContext) var moc
+    @Environment(\.colorScheme) var colorScheme
     
     // Filter bookmark by recently added
     @FetchRequest(sortDescriptors: [NSSortDescriptor(key: "dateBookmarked", ascending: false)]) var bookmarks: FetchedResults<MealDetailEntity>
@@ -34,10 +35,19 @@ struct BookmarkView: View {
     
     var emptyView: some View {
         VStack {
-            Image("NoBookmarks")
-                .resizable()
-                .scaledToFit()
-                .frame(width: 350, height: 350)
+            // Light mode
+            if colorScheme == .light {
+                Image("NoBookmarksLight")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 350, height: 350)
+                // Dark mode
+            } else {
+                Image("NoBookmarksDark")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 350, height: 350)
+            }
             
             Text("Your bookmarks are currently empty...")
                 .font(.system(.headline, design: .serif))
@@ -56,6 +66,7 @@ struct BookmarkView: View {
 
 struct BooksmarkView: View {
     @Environment(\.managedObjectContext) var moc
+    @Environment(\.colorScheme) var colorScheme
     
     @FetchRequest(sortDescriptors: [NSSortDescriptor(key: "dateBookmarked", ascending: false)]) var bookmarks: FetchedResults<MealDetailEntity>
     
@@ -93,9 +104,9 @@ struct BooksmarkView: View {
                                             .background(.black)
                                             .clipShape(Circle())
                                             .offset(x: 10, y: 10)
+                                            .shadow(color: colorScheme == .dark ? .white : .white.opacity(0), radius: colorScheme == .dark ? 3.5 : 0)
                                         , alignment: .bottomTrailing
                                     )
-                                
                                 
                                 Text(bookmark.strMeal ?? "N/A")
                                     .font(.system(.subheadline, design: .serif))
