@@ -23,6 +23,6 @@ Features and technologies:
 * YouTube Link
 
 ## Demo
-![treatBoxrecording1gif](https://github.com/user-attachments/assets/820939b3-af3d-46a0-a44b-7a384c28d01e)
+![treatBoxRecording1](https://github.com/user-attachments/assets/ef3bbcb6-c4b9-4961-8957-f4e7127acf8e)
 
 
