@@ -15,6 +15,9 @@ struct BookmarkView: View {
         
     static let tab: String = "BookmarkView"
     
+    @State var path2: [String] = [String]() // Navigation path
+        
+    let bookmarkedMeal: MealDetailEntity? = nil
     let columns: [GridItem] = Array(repeating: GridItem(.flexible()), count: 2)
     
     var body: some View {
@@ -22,9 +25,9 @@ struct BookmarkView: View {
             // Displays empty view when bookmark is empty
             emptyView
         } else {
-            NavigationStack {
+            NavigationStack(path: $path2) {
                 // Displays bookmark view when bookmark is not empty
-                BookmarskView(columns: columns, bookmarks: bookmarks)
+                BooksmarkView(path2: $path2, columns: columns)
             }
         }
     }
@@ -53,47 +56,63 @@ struct BookmarkView: View {
 //        .environmentObject(BookmarkViewModel())
 //}
 
-struct BookmarskView: View {
+struct BooksmarkView: View {
     @Environment(\.managedObjectContext) var moc
     
-    let columns: [GridItem]
-    let bookmarks: FetchedResults<MealDetailEntity>
+    @FetchRequest(sortDescriptors: [NSSortDescriptor(key: "dateBookmarked", ascending: false)]) var bookmarks: FetchedResults<MealDetailEntity>
     
+    @Binding var path2: [String] // Navigation path
+    
+    let bookmarkedMeal: MealDetailEntity? = nil
+    let columns: [GridItem]
     
     var body: some View {
-        ScrollView {
-            LazyVGrid(columns: columns, spacing: 30) {
-                ForEach(bookmarks) { bookmark in
-                    VStack(alignment: .leading, spacing: 15) {
-                        MealImageView(url: bookmark.strMealThumb ?? "", key: bookmark.idMeal ?? "")
-                            .scaledToFill()
-                            .frame(width: 165, height: 188.57)
-                            .clipShape(.rect(cornerRadius: 10))
-                            .overlay (
-                                Button {
-                                    withAnimation(.default) {
-                                        deleteBookmark(bookmark)
-                                    }
-                                } label: {
-                                    Image(systemName: "bookmark.fill")
-                                        .tint(.white)
-                                        .font(.caption)
-                                }
-                                    .padding()
-                                    .background(.black)
-                                    .clipShape(Circle())
-                                    .offset(x: 10, y: 10)
-                                , alignment: .bottomTrailing
-                            )
-                        
-                        Text(bookmark.strMeal ?? "N/A")
-                            .font(.system(.subheadline, design: .serif))
+        Button {
+            path2 = [bookmarkedMeal?.idMeal ?? ""]
+        } label: {
+            ScrollView {
+                LazyVGrid(columns: columns, spacing: 30) {
+                    ForEach(bookmarks) { bookmark in
+                        Button {
+                            path2 = [bookmark.idMeal ?? ""]
+                        } label: {
+                            VStack(alignment: .leading, spacing: 15) {
+                                MealImageView(url: bookmark.strMealThumb ?? "", key: bookmark.idMeal ?? "")
+                                    .scaledToFill()
+                                    .frame(width: 165, height: 188.57)
+                                    .clipShape(.rect(cornerRadius: 10))
+                                    .overlay (
+                                        Button {
+                                            withAnimation(.default) {
+                                                deleteBookmark(bookmark)
+                                            }
+                                        } label: {
+                                            Image(systemName: "bookmark.fill")
+                                                .tint(.white)
+                                                .font(.caption)
+                                        }
+                                            .padding()
+                                            .background(.black)
+                                            .clipShape(Circle())
+                                            .offset(x: 10, y: 10)
+                                        , alignment: .bottomTrailing
+                                    )
+                                    
+                                
+                                Text(bookmark.strMeal ?? "N/A")
+                                    .font(.system(.subheadline, design: .serif))
+                            }
+                        }
                     }
                 }
+                
+                .padding()
+                .navigationTitle("Saved Recipes")
+                .navigationBarTitleDisplayMode(.inline)
+                .navigationDestination(for: String.self) { selection in
+                    MealDetailView(mealDetailViewModel: MealDetailViewModel(), mealID: selection)
+                }
             }
-            .padding()
-            .navigationTitle("Saved Recipes")
-            .navigationBarTitleDisplayMode(.inline)
         }
     }
     
