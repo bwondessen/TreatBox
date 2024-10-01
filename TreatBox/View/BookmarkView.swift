@@ -12,11 +12,11 @@ struct BookmarkView: View {
     
     // Filter bookmark by recently added
     @FetchRequest(sortDescriptors: [NSSortDescriptor(key: "dateBookmarked", ascending: false)]) var bookmarks: FetchedResults<MealDetailEntity>
-        
+    
     static let tab: String = "BookmarkView"
     
     @State var path2: [String] = [String]() // Navigation path
-        
+    
     let bookmarkedMeal: MealDetailEntity? = nil
     let columns: [GridItem] = Array(repeating: GridItem(.flexible()), count: 2)
     
@@ -42,11 +42,9 @@ struct BookmarkView: View {
             Text("Your bookmarks are currently empty...")
                 .font(.system(.headline, design: .serif))
             
-            Group {
-                Text("Try tapping the \(Image(systemName: "bookmark")) bookmark icon in the dessert list and detail screens to add and remove recipes!")
-            }
-            .multilineTextAlignment(.center)
-            .padding()
+            Text("Try tapping the \(Image(systemName: "bookmark")) bookmark icon in the detail screens to add and remove recipes!")
+                .multilineTextAlignment(.center)
+                .padding()
         }
     }
 }
@@ -97,7 +95,7 @@ struct BooksmarkView: View {
                                             .offset(x: 10, y: 10)
                                         , alignment: .bottomTrailing
                                     )
-                                    
+                                
                                 
                                 Text(bookmark.strMeal ?? "N/A")
                                     .font(.system(.subheadline, design: .serif))

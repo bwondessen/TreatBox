@@ -19,7 +19,7 @@ struct IngredientsAndMeasurementsView: View {
             ForEach(0..<(mealDetailViewModel.meal?.ingredients.count ?? 0), id: \.self) { i in
                 VStack {
                     HStack {
-                        Text(mealDetailViewModel.meal?.ingredients[i].lowercased() ?? "N/A")
+                        Text(mealDetailViewModel.meal?.ingredients[i] ?? "N/A")
                             .foregroundStyle(.secondary)
                         
                         Spacer()

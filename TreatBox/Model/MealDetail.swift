@@ -81,7 +81,7 @@ struct MealDetail: Codable, Hashable {
             if child.label!.contains("strIngredient") {
                 guard let value = child.value as? String, !value.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty else { continue }
                 
-                ingredients.append(value)
+                ingredients.append(value.lowercased())
             }
         }
         
@@ -100,7 +100,7 @@ struct MealDetail: Codable, Hashable {
             if child.label!.contains("strMeasure") {
                 guard let value = child.value as? String, !value.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty else { continue }
                 
-                ingredients.append(value)
+                ingredients.append(value.lowercased())
             }
         }
         
