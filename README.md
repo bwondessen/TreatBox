@@ -16,6 +16,7 @@ Features and technologies:
 * MVVM architecture
 * Bookmarking feature
 * Search functionality
+* Animations
 * YouTube Link
 
 ## Demo
