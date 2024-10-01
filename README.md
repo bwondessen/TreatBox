@@ -12,15 +12,17 @@ Features and technologies:
 
 * Swift Concurrency (async/await)
 * Combine
+* Core Data (data persistence)
 * Image caching
 * Unit testing
 * API calls
-* Thread safety
+* Thread safety 
 * MVVM architecture
-* Search
+* Bookmarking feature
+* Search functionality
 * YouTube Link
 
 ## Demo
-![treatBoxRecording](https://github.com/user-attachments/assets/dff7cb1a-da71-4990-833d-6af21d916ce9)
+![treatBoxrecording1gif](https://github.com/user-attachments/assets/820939b3-af3d-46a0-a44b-7a384c28d01e)
 
 
