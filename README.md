@@ -17,6 +17,7 @@ Features and technologies:
 * Bookmarking feature
 * Search functionality
 * Animations
+* Dark mode
 * YouTube Link
 
 ## Demo
