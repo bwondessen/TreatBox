@@ -2,11 +2,7 @@
 
 ## A native iOS app written in SwiftUI that uses TheMealDB's API (https://themealdb.com/api.php) to fetch and display desserts and its details!
 
-This app displays a list of desserts and when a user selects a dessert, they are taken to a detail view that includes:
-
-* Meal name
-* Instructions
-* Ingredients/measurements
+This app displays a list of desserts and when a user selects a dessert, they are taken to a detail view that includes: meal name, instructions, and ingredients/measurements. Users can bookmark/unbookmark recipes and it'll save to the bookmarks tab. Additionally, when a user selects a bookmarked recipe, it'll take them to a detail view.
 
 Features and technologies:
 
