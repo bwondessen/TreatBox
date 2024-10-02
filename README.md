@@ -11,7 +11,7 @@ Features and technologies:
 * Core Data (data persistence)
 * Image caching
 * Unit testing
-* API calls
+* Networking
 * Thread safety 
 * MVVM architecture
 * Bookmarking feature
