@@ -6,7 +6,7 @@ This app displays a list of desserts and when a user selects a dessert, they are
 
 Features and technologies:
 
-* Swift Concurrency (async/await)
+* Concurrency (async/await)
 * Combine
 * Core Data (data persistence)
 * Image caching
